@@ -24,6 +24,7 @@ This template is designed to create a more flexible and robust environment for t
 * You will then need to copy and paste the contents of this newly created gitlog file into the desired section of your engineering notebook.
 * **You will need to modify the gitlog output to work with LaTeX**. Unfortunately the script does not create output that can compile, but luckily it just requires a minor change. Make sure the top portion of the output matches this:
 
+```
 \begin{center}
 \begin{longtabu} to \textwidth {|
     X[4,l]|
@@ -31,8 +32,9 @@ This template is designed to create a more flexible and robust environment for t
     X[8,l]|}
     \hline
     \textbf{Author} & \textbf{Date} & \textbf{Message} \\ \hline
+```
 
-ensuring that there are two backslash characters before the final "\hline" command. 
+ensuring that there are two backslash characters before the final "\hline" command.
 
 ####Editing in Atom
 * Atom will work well for editing the notebook, and in many ways performs better than Overleaf, but only with the right configuration.

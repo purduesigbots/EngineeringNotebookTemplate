@@ -1,0 +1,26 @@
+\begingroup %will be closed at the end of the chapter, needed for renewing the chapter name properly
+\renewcommand\thechapter{\#} %manually set the chapter number for oddball iteration naming like 2A
+
+\chapter[name]{name}
+
+\section[Iteration \# Design Methodology]{Design Methodology}
+*Design Methodology for section as a whole here*
+\subsection[Iteration \# INSERT_SUBSECTION]{Subsystem}
+*Design Methodology for subsystem*
+%repeat for other subsystems
+\subsection[Iteration \# Autonomous]{Autonomous}
+\subsection[Iteration \# Op Control]{Op Control}
+%-----------------------------------------
+\section[Iteration \# Mechanical Subsystems]{Mechanical Build Log}
+
+
+%-----------------------------------------
+\section[Iteration \# Code]{Software Commit Log}
+
+%Git commit log/other code related updates
+
+
+%-----------------------------------------
+\section[Iteration \# Wiring Diagram]{Wiring Diagram}
+
+\endgroup %ends the chapter renaming
