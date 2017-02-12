@@ -104,7 +104,7 @@
 \tocloftpagestyle{plain}
 
 %for strikethrough command
-\RequirePackage{tikz} 
+\RequirePackage{tikz}
 \usetikzlibrary{calc}
 \RequirePackage{zref-savepos}
 \RequirePackage{tabu}
@@ -237,7 +237,7 @@
         in
         (\n{llx}, \n{lly}) -- (\n{urx}, \n{ury})
       ;
-    }% 
+    }%
   }%
 }
 
@@ -332,7 +332,7 @@
 %reset the chapter numbers for each part
 \makeatletter
 \@addtoreset{chapter}{part}
-\makeatother  
+\makeatother
 
 %increase size of the subsubsection headers
 \titleformat*{\subsubsection}{\large\bfseries}
@@ -401,6 +401,7 @@
 \newcommand*{\division}[1]{\gdef\division{#1}}
 
 \newcommand*{\teamname}[1]{\gdef\teamname{#1}}
+\newcommand*{\teamnumber}[1]{\gdef\teamnumber{#1}}
 
 %-----------------------------------------
 % Introductory Material Formatting
@@ -412,7 +413,7 @@
 	\renewcommand{\thechapter}{\roman{chapter}}
     \renewcommand{\thesection}{\thechapter.\roman{section}}
     \renewcommand{\thesubsection}{\thesection.\roman{subsection}}
-    
+
 }
 
 %-----------------------------------------
