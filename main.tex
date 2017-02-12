@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Purdue ACM SIGBots Engineering Notebook
+% LaTeX Template
+% Version 1.0 (02/12/2017)
+%
+%
+% Notes:
+% This file contains the setup for the document and the information for the notebook that will be consistent year to year.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-----------------------------------------
+% Document Configuration
+%-----------------------------------------
+\documentclass[
+12pt, %default document font size
+english %sets the language as english
+]
+{SIGBotsEngineeringNotebook} %class file specifying document structure
+
+%-----------------------------------------
+% Bibliography initialization
+%-----------------------------------------
+\usepackage[backend=biber,style=authoryear,sorting=nty]{biblatex}
+\bibliography{./Starstruck}
+\nocite{*} %needed to make sure that the file is actually loaded, do not remove
+
+%-----------------------------------------
+% Margin Settings
+%-----------------------------------------
+\usepackage[
+	letterpaper,
+	portrait,
+	margin=1in,
+    %showframe, %shows how the text block is set on the page, helping for adjusting margins
+]
+{geometry}
+
+%-----------------------------------------
+% Document Information
+%-----------------------------------------
+\currentgame{VEX Starstruck}
+\currentseason{2016-17}
+\division{Design Division}
+
+\teamname{Purdue SIGBots}
+
+%-----------------------------------------
+% Document Initialization
+%-----------------------------------------
+\begin{document}
+
+\frontmatter %Use Roman Numeral page numbering style for the pre-content pages
+%-----------------------------------------
+% Title Page
+%-----------------------------------------
+\begin{titlepage}
+\begin{center}
+
+\textsc{\LARGE Purdue SIGBots}\\[1cm]
+\textsc{\Large Engineering Notebook}\\[0.5cm]
+\hrule %horizontal line
+\hfill \\[1.5cm] %provides the space between the line and title
+{\huge
+\bfseries
+\currentgame\ (\currentseason)
+}
+\\[1.5cm]
+%\includegraphics[scale=.5]{ACMLogoMk1}
+\includegraphics[scale=.125]{BLRS}
+\\[1cm]
+\textsc{\Large Team BLRS}\\[0.5cm] %for non worlds competitions
+%\textsc{\Large BLRS \division}\\[0.5cm] %uncomment for worlds to input division
+
+\vfill
+\end{center}
+\end{titlepage}
+\afterpage{\blankpage}
+
+%-----------------------------------------
+% Table of Contents
+%-----------------------------------------
+\clearpage %used to prevent tocloft package from pushing page ahead by one
+\pagestyle{plain}
+\tableofcontents
+\clearpage
+\listoffigures
+
+%-----------------------------------------
+% Document Body
+%-----------------------------------------
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+%Introductory Information
+\part{Introductory Information}
+\pagestyle{Intro} %reformat header and footer
+\begin{Introductory Material}
+\introtrue %boolean to change section headings
+\include{IntroductoryMaterial/Introduction}
+\include{IntroductoryMaterial/GameRules}
+\include{IntroductoryMaterial/Strategy}
+\include{IntroductoryMaterial/TeamPerformance}
+\end{Introductory Material}
+\introfalse
+
+%Iterations
+\part{Build Iterations}
+\pagestyle{Iterations} %begin Iteration style headers and footers
+\include{Iterations/Iteration1}
+\include{Iterations/Iteration2A}
+\include{Iterations/Iteration2B}
+\include{Iterations/Iteration2C}
+\include{Iterations/Iteration3A}
+\include{Iterations/Iteration3B}
+
+%Appendices
+\part{Appendices}
+\appendix
+\appendixtrue
+\pagestyle{Appendix}
+\include{Appendices/MeetingNotes}
+\include{Appendices/VexComponentSpecs}
+\include{Appendices/MechanicalAccumulatedKnowledge}
+\include{Appendices/SoftwareAccumulatedKnowledge}
+\include{Appendices/ElectricalAccumulatedKnowledge}
+%\include{Appendices/PROS}
+\include{Appendices/3DPrinting}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
