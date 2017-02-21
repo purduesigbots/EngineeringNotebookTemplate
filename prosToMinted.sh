@@ -33,6 +33,8 @@ then
                 	printf "\\pagebreak\n\n" >> $OUTPUT
         	done
 		echo "Added Source Files"
+
+		#Copy files into LaTex directory
 		if [ -d "../$1/Code" ]
 		then
 			rm -rf ../$1/Code
