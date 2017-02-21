@@ -36,6 +36,15 @@ This template is designed to create a more flexible and robust environment for t
 
 ensuring that there are two backslash characters before the final "\hline" command.
 
+####Adding PROS Code to an iteration
+There is a BASH script provided in this repo for use in a PROS directory. When the script is run in a PROS directory (and the name of the directory for the LaTeX notebook is specified), a .tex file will be created that will import your PROS code wherever you copy and paste the contents of the .tex in your notebook (complete with syntax highlighting too). API.h is omitted from this automatically.
+
+The notebook's directory should be in the same folder as the PROS directory.
+
+The syntax for running the script should be:
+```
+PROS_DIRECTORY/$: ./prosToMinted.sh NOTEBOOK_DIRECTORY
+```
 ####Editing in Atom
 * Atom will work well for editing the notebook, and in many ways performs better than Overleaf, but only with the right configuration.
 * Install the following packages:
