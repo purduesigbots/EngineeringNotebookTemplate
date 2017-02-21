@@ -7,16 +7,16 @@ OUTPUT="codeToLaTeX.tex"
 if [ -e "project.pros" ]
 then
 	if [ "$1" != "" ]
-	then 
+	then
 		echo "Transferring code..."
 		printf "%%-----------------------------------------\n" > $OUTPUT
 		printf "\\section[Iteration   Code]{Code}\n\n" >> $OUTPUT
-	
+
 		#add to minted section
         	for i in ./include/*.h
 		do
 			if [ "${i##*/}" == "API.h" ]
-			then 
+			then
 				continue; #don't add the PROS API to the notebook
 			fi
 			printf "\\subsection{include/%s}\n" "${i##*/}" >> $OUTPUT
@@ -25,15 +25,6 @@ then
 		done
 		printf "\n\n" >> $OUTPUT
 		echo "Added headers"
-	
-		for i in ./include/scripts/*.h
-		do
-       	        	printf "\\subsection{include/scripts/%s}\n" "${i##*/}" >> $OUTPUT
-       	        	printf "\\inputminted{c}{Code/include/scripts/%s}\n" "${i##*/}" >> $OUTPUT
-                	printf "\\pagebreak\n\n" >> $OUTPUT
-        	done
-		printf "\n\n" >> $OUTPUT
-		echo "Added Scripts"
 
 		for i in ./src/*.c
 		do
@@ -48,7 +39,7 @@ then
 		fi
 		mkdir ../$1/Code
 		mkdir ../$1/Code/src
-		mkdir ../$1/Code/include 
+		mkdir ../$1/Code/include
 		cp -r src/*.c ../$1/Code/src
 		cp -r include/. ../$1/Code/include
 	else
