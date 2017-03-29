@@ -13,28 +13,9 @@ This template is designed to create a more flexible and robust environment for t
 ### User Guide
 
 #### Creating Git Commit Logs
-* The main steps for this (as well as the BASH script for this process) can be found at http://amritamaz.net/blog/gitlog2latex-pretty-git-commit-logs-in-latex
-* A few minor changes will need to be made to this process, however. The set of steps to run this script should include:
-	* Navigate to your desired git directory in BASH (or BASH for Windows)
-    * curl -O https://gist.githubusercontent.com/amritamaz/68d72c602a29635168ed/raw/4a2f064142b08f3c021e9a7562ec9116c0490cbf/gitlog2latex.sh
-	* export GHCRTS=-V0
-    * chmod a+x gitlog2latex.sh
-    * ./gitlog2latex.sh
-* The script will then be present in your git directory (add it to the .gitignore file if you don't want it to be pushed with your code)
-* You will then need to copy and paste the contents of this newly created gitlog file into the desired section of your engineering notebook.
-* **You will need to modify the gitlog output to work with LaTeX**. Unfortunately the script does not create output that can compile, but luckily it just requires a minor change. Make sure the top portion of the output matches this:
-
-```
-\begin{center}
-\begin{longtabu} to \textwidth {|
-    X[4,l]|
-    X[3,c]|
-    X[8,l]|}
-    \hline
-    \textbf{Author} & \textbf{Date} & \textbf{Message} \\ \hline
-```
-
-ensuring that there are two backslash characters before the final "\hline" command.
+* Run the gitlogCreator.sh script in BASH, in the desired PROS directory.
+* You will need the git and pandoc packages for BASH.
+* The script will create a "gitlog.tex" file that can be copied into the engineering notebook.
 
 #### Adding PROS Code to an iteration
 There is a BASH script provided in this repo for use in a PROS directory. When the script is run in a PROS directory (and the name of the directory for the LaTeX notebook is specified), a .tex file will be created that will import your PROS code wherever you copy and paste the contents of the .tex in your notebook (complete with syntax highlighting too). API.h is omitted from this automatically.
