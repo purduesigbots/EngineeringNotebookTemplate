@@ -3,7 +3,6 @@ ___
 
 
 ###### Created by Jonathan Bayless
-Contact: baylessj@purdue.edu
 
 
 This template is designed to create a more flexible and robust environment for the development of an engineering notebook for the VEX Robotics Competition. Users may input their team's information and build logs for each season, and the template will handle formatting and a variety of other tasks necessary for making a printable and pleasant looking document.
