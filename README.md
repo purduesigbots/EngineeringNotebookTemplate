@@ -13,7 +13,7 @@ This template is designed to create a more flexible and robust environment for t
 
 #### Creating Git Commit Logs
 * Run the gitlogCreator.sh script in BASH, in the desired PROS directory.
-* You will need the git and pandoc packages for BASH.
+* You will need the git and pandoc command line tools.
 * The script will create a "gitlog.tex" file that can be copied into the engineering notebook.
 
 #### Adding PROS Code to an iteration
@@ -25,6 +25,9 @@ The syntax for running the script should be:
 ```
 PROS_DIRECTORY/$: ./prosToMinted.sh NOTEBOOK_DIRECTORY
 ```
+
+**Update 2021:** A more polished version of this script has been released at https://github.com/Udit8348/Hard-Copy. This tool might be easier to get set up.
+
 #### Editing in Atom
 * Atom will work well for editing the notebook, and in many ways performs better than Overleaf, but only with the right configuration.
 * Install the following packages:
